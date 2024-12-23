@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata;
-
-namespace SelectionStatementExercise
+﻿namespace SelectionStatementExercise
 {
     public class Program
     {
@@ -12,25 +10,30 @@ namespace SelectionStatementExercise
 
             while (response != favNumber)
             {
-                Console.WriteLine("Give me a number between 1-10?");
-                response = int.Parse(Console.ReadLine());
+                Console.WriteLine("Give me a number:");
+                 response = int.Parse(Console.ReadLine());
 
                 if (response < favNumber)
                 {
-                    Console.WriteLine($"Too low!\n your guess: {response}");
+                    Console.WriteLine($"Too low!\nYour guess: {response}");
                 }
 
-                else if (response >= favNumber)
+                else if (response > favNumber)
 
-                {
-                    Console.WriteLine($"Too high!\n your guess: {response}");
+                { 
+                    Console.WriteLine($"Too high!\nYour guess: {response}");
                 }
 
                 else 
-                {
+                { 
                     Console.WriteLine($"You guessed it!/n the favorite number is {response}!");
                 }
             }
+            
+
+
+           
+            
         }
     }
 }    
